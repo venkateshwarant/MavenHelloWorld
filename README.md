@@ -25,6 +25,11 @@ you should get proper response back like below
 
 ![response message](/src/images/1.png)
 
+6. A new entry in Test table should be made after the post request like below.
+
+![response message](/src/images/2.png)
+
+
 ## Contents of the product
 This is our product which we will be testing in all other testing tutorial, this has three parts
 1. static html page /helloworld/helloworld.html
