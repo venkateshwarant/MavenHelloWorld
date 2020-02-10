@@ -4,13 +4,7 @@
   <artifactId>HelloWorld</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  
-  <distributionManagement>
-    <repository>
-      <id>vagrant</id>
-      <url>DemoDynamicServer:/home/vagrant</url>
-    </repository>
-  </distributionManagement>
+ 
   
   <dependencies>
     <dependency>
@@ -29,11 +23,6 @@
 	    <artifactId>json</artifactId>
 	    <version>20190722</version>
 	</dependency>
-	<dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
   </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -43,8 +32,6 @@
         <version>3.8.0</version>
         <configuration>
           <release>12</release>
-          <fork>true</fork>
-          <executable>/usr/bin/java</executable>
         </configuration>
       </plugin>
       <plugin>
@@ -58,15 +45,6 @@
       </plugin>
       
     </plugins>
-    
-    <extensions>
-      <!-- Enabling the use of SSH -->
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-         <artifactId>wagon-ssh-external</artifactId>
-         <version>1.0-beta-6</version>
-      </extension>
-    </extensions>
     
   </build>
 </project>
