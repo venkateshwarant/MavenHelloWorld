@@ -43,6 +43,8 @@
         <version>3.8.0</version>
         <configuration>
           <release>12</release>
+          <fork>true</fork>
+          <executable>/usr/bin/java</executable>
         </configuration>
       </plugin>
       <plugin>
