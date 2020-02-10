@@ -73,6 +73,10 @@ Vagrant.configure("2") do |config|
      apt-get update
      sudo apt install default-jre -y
      sudo apt-get install openjdk-8-jdk -y
+     export DEBIAN_FRONTEND="noninteractive"
+     sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password 12345678"
+     sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password 12345678"
+     sudo apt-get install -y mysql-server
      curl -o apache-tomcat-9.0.30.tar.gz https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz
      tar -zxvf apache-tomcat-9.0.30.tar.gz
      rm apache-tomcat-9.0.30.tar.gz
