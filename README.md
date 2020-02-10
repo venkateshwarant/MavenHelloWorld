@@ -21,7 +21,9 @@ NAME CHAR(10),
 VAL CHAR(20));
 ```
 5. open post man and check if you can properly post in http://192.168.33.14:8080/helloworld/insert
+you should get proper response back like below
 
+![response message](/src/images/1.png)
 
 ## Contents of the product
 This is our product which we will be testing in all other testing tutorial, this has three parts
