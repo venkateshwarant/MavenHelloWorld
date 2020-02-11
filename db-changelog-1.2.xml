@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+		<changeSet id="2-insert" author="author1">
+			<insert tableName="department">
+				<column name="deptid" value="01"/>
+				<column name="deptname" value="sales"/>
+				<column name="deptlocation" value="India"/>
+			</insert>
+		</changeSet>
+		<changeSet id="tag-1.2" author="author1">
+			<tagDatabase tag="1.2insert" />
+		</changeSet>
+</databaseChangeLog>

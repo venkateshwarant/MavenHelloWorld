@@ -4,9 +4,8 @@
   <artifactId>HelloWorld</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
- 
-  
   <dependencies>
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -17,7 +16,14 @@
 	   <groupId>mysql</groupId>
 	   <artifactId>mysql-connector-java</artifactId>
 	   <version>8.0.11</version>
+	   
 	</dependency>
+	
+	<dependency>
+             <groupId>org.liquibase</groupId>
+             <artifactId>liquibase-core</artifactId>
+             <version>3.5.3</version>
+          </dependency>
 	<dependency>
 	    <groupId>org.json</groupId>
 	    <artifactId>json</artifactId>
@@ -47,6 +53,21 @@
         
       </plugin>
       
+      <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>3.5.3</version>
+		<configuration>
+		   <propertyFile>liquibase.properties</propertyFile>
+		</configuration>
+                <executions>
+		   <execution>
+                      <goals>
+		         <goal>update</goal>
+                      </goals>
+     		   </execution>
+                </executions>
+             </plugin>
     </plugins>
     
   </build>
