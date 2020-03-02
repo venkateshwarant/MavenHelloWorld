@@ -1,7 +1,7 @@
 # MavenHelloWorld
 
 # Prerequisite
-1. Install vagrant
+1. Install vagrant 
 
 # Deploy the product in a VM
 1. run the Vagrant file found in this repository
